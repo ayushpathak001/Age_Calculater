@@ -2,7 +2,7 @@ import streamlit as st
 from dateutil.relativedelta import relativedelta 
 from datetime import date
 
-st.title("Age Calcuater : ")
+st.title("Age Calcuator : ")
 
 dob = st.date_input(
     "Enter Your DOB " , 
@@ -19,5 +19,6 @@ if st.button("Check Age : ") :
     age = relativedelta(today , dob)
 
     st.success(f'You are {age.years} years, {age.months} months and {age.days} days old.')
+
 
     st.balloons()
